@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: url("/assets/img/InkSumos_wallpaper.png");
+  background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  cursor: url("/assets/img/cursorink_white.png"), auto;
+
+  /*@media (max-width: 576px) {
+    background-color: grey;
+  }
+  @media (min-width: 577px) and (max-width: 768px) {
+    background-color: grey;
+  }
+  @media (min-width: 769px) {
+    background-color: grey;
+  }*/
+}
+
+@keyframes cambiarColor {
+  0% {
+    color: rgb(110, 7, 7); /* Color inicial */
+  }
+  50% {
+    color: rgb(192, 7, 31);/* Color intermedio */
+  }
+  100% {
+    color: rgb(110, 7, 7); /* Color final */
+  }
+}
+
+h1 {
+  font-family: "Jacquard 24", system-ui;
+  text-align: center;
+  font-size: 4rem; /* Tamaño del texto */
+  animation: cambiarColor 2s infinite; /* Aplica la animación */
+}
+
+h2 {
+  color: rgb(172, 26, 0);
+  text-align: center;
+}
+
+h3 {
+  text-decoration: underline;
+}

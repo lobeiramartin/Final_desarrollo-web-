@@ -1,0 +1,106 @@
+
+.tab-label {
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  margin-right: 5px;
+  border-radius: 10% 25%;
+  transition: 1s;
+  display: inline-block;
+
+  &:hover {
+    color: black;
+    background-color: lightslategray;
+    border-radius: 25% 10%;
+    transition: 1s;
+  }
+}
+
+.btn {
+  background-color: black; 
+  color: white; 
+  border-color: lightslategrey; 
+  padding: 10px 20px; 
+  border-radius: 10% 25%; 
+  transition: 1s;
+  cursor: url("/assets/img/cursorink_black.png"), auto;
+}
+
+.btn:hover {
+  background-color: #af200d;
+  border-color: orange;
+  border-radius: 25% 10%;
+  transition: 1s;
+}
+
+
+.tab-content {
+  display: none;
+  margin-top: 20px;
+
+    & {
+    display: block;
+    justify-content: center; 
+    align-items: center; 
+    width: 300px; 
+    height: 200px; 
+    background-color: lightslategray;
+  }
+}
+
+.card{
+  color: white;
+  background-color: transparent;
+  border: none;
+  justify-content: center;
+  align-items: center; 
+  text-align: center;
+}
+
+.maquinas {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+  grid-template-rows: repeat(1, 1fr);   
+  gap: 20px; 
+  width: 100%; 
+  margin: 10px;
+
+  img {
+    width: 200px; 
+    height: auto;
+    transition: transform 1.3s cubic-bezier(.25, .8, .25, 1);
+    cursor: url("/assets/img/cursorink_black.png");
+    
+    &:hover {
+      transform: scale(1.5);
+      animation: float 2s ease-in-out infinite;
+    }
+  }
+}
+
+.tintas {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+  grid-template-rows: repeat(1, 1fr);   
+  gap: 30px; 
+  width: 80%; 
+  margin: 20px;
+
+  img { 
+    width: 30px; 
+    height: auto;
+    transition: transform 1.3s;
+    cursor: url("/assets/img/cursorink_black.png");
+
+    &:hover {
+      transform: scale(1.5);
+      animation: float 2s ease-in-out infinite;
+    }
+  }
+}
+
+@keyframes float {
+  0% { transform: translateY(0) scale(1.5); }
+  50% { transform: translateY(-10px) scale(1.5); }
+  100% { transform: translateY(0) scale(1.5); }
+}

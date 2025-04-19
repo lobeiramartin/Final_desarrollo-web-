@@ -1,0 +1,294 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: url("/assets/img/InkSumos_wallpaper.png");
+  background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  cursor: url("/assets/img/cursorink_white.png"), auto;
+  /*@media (max-width: 576px) {
+    background-color: grey;
+  }
+  @media (min-width: 577px) and (max-width: 768px) {
+    background-color: grey;
+  }
+  @media (min-width: 769px) {
+    background-color: grey;
+  }*/
+}
+
+@keyframes cambiarColor {
+  0% {
+    color: rgb(110, 7, 7); /* Color inicial */
+  }
+  50% {
+    color: rgb(192, 7, 31); /* Color intermedio */
+  }
+  100% {
+    color: rgb(110, 7, 7); /* Color final */
+  }
+}
+h1 {
+  font-family: "Jacquard 24", system-ui;
+  text-align: center;
+  font-size: 4rem; /* Tamaño del texto */
+  animation: cambiarColor 2s infinite; /* Aplica la animación */
+}
+
+h2 {
+  color: rgb(172, 26, 0);
+  text-align: center;
+}
+
+h3 {
+  text-decoration: underline;
+}
+
+.container-fluid {
+  background-color: black;
+  padding: 15px;
+  cursor: url("/assets/img/cursorink_white.png"), auto;
+}
+.container-fluid .navbar-brand img {
+  border-radius: 7px;
+}
+.container-fluid .nav-item a {
+  color: whitesmoke;
+}
+.container-fluid .nav-item a:hover {
+  color: #517691;
+}
+.container-fluid .navbar .btn-outline-success {
+  color: white;
+  border: 1px solid black;
+}
+.container-fluid .navbar .btn-outline-success:hover {
+  background-color: #517691;
+  color: #fff;
+}
+
+footer {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  padding: 20px;
+  margin: 10px;
+}
+footer .brand {
+  justify-content: right;
+}
+footer .social-icons {
+  display: flex;
+  justify-content: left;
+  gap: 20px;
+}
+footer .social-icons a {
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+}
+footer .social-icons a:hover {
+  color: #0e4770;
+  animation: bounce;
+  animation-duration: 0.5s;
+}
+
+.index {
+  padding: 10px;
+  margin: 10px;
+  background-color: gray;
+}
+.index img {
+  width: 500px;
+  height: 500px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.index .carousel.slide {
+  margin: 10px;
+  padding: 10px;
+  transition: 1s;
+}
+
+.nosotros {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.nosotros .card img {
+  width: 600px;
+  position: relative;
+  display: block;
+  border-radius: 10% 25%;
+  transition: border-radius 0.5s;
+}
+.nosotros .card img:hover {
+  border-radius: 25% 10%;
+  transition: 1s;
+}
+
+/*.nosotros1 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: transparent;
+
+  &:hover img {
+    overflow: hidden;
+    transition: 1s;
+  }
+}
+
+.nosotros2 {
+  width: 100%;
+  background-color: transparent;
+
+  &:hover img {
+    overflow: hidden;
+    transition: 1s;
+  }
+}*/
+.tab-label {
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  margin-right: 5px;
+  border-radius: 10% 25%;
+  transition: 1s;
+  display: inline-block;
+}
+.tab-label:hover {
+  color: black;
+  background-color: lightslategray;
+  border-radius: 25% 10%;
+  transition: 1s;
+}
+
+.btn {
+  background-color: black;
+  color: white;
+  border-color: lightslategrey;
+  padding: 10px 20px;
+  border-radius: 10% 25%;
+  transition: 1s;
+  cursor: url("/assets/img/cursorink_black.png"), auto;
+}
+
+.btn:hover {
+  background-color: #af200d;
+  border-color: orange;
+  border-radius: 25% 10%;
+  transition: 1s;
+}
+
+.tab-content {
+  display: none;
+  margin-top: 20px;
+}
+.tab-content {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 200px;
+  background-color: lightslategray;
+}
+
+.card {
+  color: white;
+  background-color: transparent;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.maquinas {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 20px;
+  width: 100%;
+  margin: 10px;
+}
+.maquinas img {
+  width: 200px;
+  height: auto;
+  transition: transform 1.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: url("/assets/img/cursorink_black.png");
+}
+.maquinas img:hover {
+  transform: scale(1.5);
+  animation: float 2s ease-in-out infinite;
+}
+
+.tintas {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 30px;
+  width: 80%;
+  margin: 20px;
+}
+.tintas img {
+  width: 30px;
+  height: auto;
+  transition: transform 1.3s;
+  cursor: url("/assets/img/cursorink_black.png");
+}
+.tintas img:hover {
+  transform: scale(1.5);
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1.5);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.5);
+  }
+  100% {
+    transform: translateY(0) scale(1.5);
+  }
+}
+.sucursales {
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.sucursales .caballito,
+.sucursales .devoto,
+.sucursales .moron {
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  align-items: center;
+  -o-object-position: center;
+  object-position: center;
+}
+.sucursales .caballito img,
+.sucursales .devoto img,
+.sucursales .moron img {
+  border-radius: 10px;
+}
+
+.formulario {
+  color: white;
+  padding: 10px;
+  margin: 10px;
+}
+.formulario .form-nombre, .formulario .form-consulta, .formulario .form-email {
+  width: 10px;
+  padding: 10px;
+}/*# sourceMappingURL=style.css.map */
