@@ -54,7 +54,7 @@ h3 {
 .container-fluid {
   background-color: black;
   padding: 15px;
-  cursor: url("../assets/img/cursorink_white.png"), auto;
+  cursor: url("/assets/img/cursorink_white.png"), auto;
 }
 .container-fluid .navbar-brand img {
   border-radius: 7px;
@@ -178,7 +178,7 @@ footer .social-icons a:hover {
   padding: 10px 20px;
   border-radius: 10% 25%;
   transition: 1s;
-  cursor: url("../assets/img/cursorink_black.png"), auto;
+  cursor: url("/assets/img/cursorink_black.png"), auto;
 }
 
 .btn:hover {
@@ -222,7 +222,7 @@ footer .social-icons a:hover {
   width: 200px;
   height: auto;
   transition: transform 1.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  cursor: url("../assets/img/cursorink_black.png");
+  cursor: url("/assets/img/cursorink_black.png");
 }
 .maquinas img:hover {
   transform: scale(1.5);
@@ -241,7 +241,7 @@ footer .social-icons a:hover {
   width: 30px;
   height: auto;
   transition: transform 1.3s;
-  cursor: url("../assets/img/cursorink_black.png");
+  cursor: url("/assets/img/cursorink_black.png");
 }
 .tintas img:hover {
   transform: scale(1.5);
